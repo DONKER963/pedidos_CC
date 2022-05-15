@@ -8,7 +8,7 @@ def ver_log(id,password):
         conexion.cursor.execute(sql)
     except:
         pass
-    idx = conexion.cursor.fetchall()
+    idx = conexion.cursor.fetchone()
     if idx:
         messagebox.showinfo(message='BIENVENIDO')
     else:

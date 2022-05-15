@@ -2,15 +2,32 @@ import tkinter as tk
 from model.loggin import *
 from client.principal import *
 
+#para despues :c
+class usuario():
+    def __init__(self,x):
+        self.id = x
+        self.nombre = x
+        self.contra = x
+        self.TP = x
+        print(self.id,self.nombre,self.contra,self.TP)
+
+    def mostrarDatos(self):
+        print(self.id,self.nombre,self.contra,self.TP)
+        
+
+    
+
+
+
+
+
 class loggin(tk.Frame):
     def __init__(self,root = None):
         super().__init__(root,width=600,height=500)
         #ventana
         self.root = root
-        self.pack()
-
+        self.pack() 
         self.pantallaLogin()
-    
 
     def pantallaLogin(self):
         #etiqueta ID
@@ -45,15 +62,13 @@ class loggin(tk.Frame):
             self.ID.get(),#variable NO CAJA DE TEXTO
             self.password.get()#variable NO CAJA TEXTO
         )
+        
         self.ID.set('')
         self.password.set('')
-        
+        print(x)
         if x:
             self.root.destroy()
             principal()
-
-
-
 
 
 
